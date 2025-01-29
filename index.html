@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quest Riddle Stage</title>
+  <title>Quest</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -38,7 +40,7 @@
 <body>
   <h1>Riddle Stage</h1>
   <p>Solve the riddle to unlock the next stage:</p>
-  <p><strong>"I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"</strong></p>
+  <p><strong>"тут мой вопрос?"</strong></p>
 
   <input type="text" id="answer" placeholder="Enter your answer...">
   <button onclick="checkAnswer()">Submit</button>
@@ -47,12 +49,12 @@
 
   <script>
     function checkAnswer() {
-      const correctAnswer = "echo";
+      const correctAnswer = "правильный ответ тут";
       const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
       const resultDiv = document.getElementById("result");
 
       if (userAnswer === correctAnswer) {
-        resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>Follow the path to the old oak tree.</strong>`;
+        resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>подсказка на следующий уровень</strong>`;
         resultDiv.classList.remove("hidden");
       } else {
         resultDiv.innerHTML = `Wrong answer. Try again.`;
