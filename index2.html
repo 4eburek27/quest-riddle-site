@@ -1,0 +1,64 @@
+< !DOCTYPE html >
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Quest Riddle Stage</title>
+                    <style>
+                        body {
+                            font - family: 'Arial', sans-serif;
+                        background-color: #f0f8ff;
+                        text-align: center;
+                        padding: 50px;
+    }
+                        #result {
+                            margin - top: 20px;
+                        font-size: 1.2em;
+    }
+                        .hidden {
+                            display: none;
+    }
+                        input[type="text"] {
+                            padding: 10px;
+                        width: 80%;
+                        max-width: 300px;
+                        margin: 10px 0;
+    }
+                        button {
+                            padding: 10px 20px;
+                        font-size: 1em;
+                        cursor: pointer;
+                        background-color: #0078d7;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+    }
+                    </style>
+                </head>
+                <body>
+                    <h1>Riddle Stage</h1>
+                    <p>Solve the riddle to unlock the next stage:</p>
+                    <p><strong>"I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"</strong></p>
+
+                    <input type="text" id="answer" placeholder="Enter your answer...">
+                        <button onclick="checkAnswer()">Submit</button>
+
+                        <div id="result" class="hidden"></div>
+
+                        <script>
+                            function checkAnswer() {
+      const correctAnswer = "echo";
+                            const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+                            const resultDiv = document.getElementById("result");
+
+                            if (userAnswer === correctAnswer) {
+                                resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>Follow the path to the old oak tree.</strong>`;
+                            resultDiv.classList.remove("hidden");
+      } else {
+                                resultDiv.innerHTML = `Wrong answer. Try again.`;
+                            resultDiv.classList.remove("hidden");
+      }
+    }
+                        </script>
+                </body>
+            </html>
