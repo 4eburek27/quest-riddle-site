@@ -40,7 +40,8 @@
 <body>
   <h1>Riddle Stage</h1>
   <p>Solve the riddle to unlock the next stage:</p>
-  <p><strong>"тут мой вопрос?"</strong></p>
+  <p><strong>"This tool is used to drive nails into wood and is often utilized in construction and repair. What is it?
+"</strong></p>
 
   <input type="text" id="answer" placeholder="Enter your answer...">
   <button onclick="checkAnswer()">Submit</button>
@@ -49,12 +50,12 @@
 
   <script>
     function checkAnswer() {
-      const correctAnswer = "правильный ответ тут";
+      const correctAnswer = "Hammer";
       const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
       const resultDiv = document.getElementById("result");
 
       if (userAnswer === correctAnswer) {
-        resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>подсказка на следующий уровень</strong>`;
+        resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>-behind the rocket</strong>`;
         resultDiv.classList.remove("hidden");
       } else {
         resultDiv.innerHTML = `Wrong answer. Try again.`;
