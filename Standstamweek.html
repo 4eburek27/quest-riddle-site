@@ -36,9 +36,10 @@
                     </style>
                 </head>
                 <body>
-                    <h1>Riddle Stage</h1>
+                    <h1>Steam Week Quiz №2</h1>
                     <p>Solve the riddle to unlock the next stage:</p>
-                    <p><strong>"второй вопрос?"</strong></p>
+                    <p><strong>"In water, he moves like a fish, on land, he‘s a reptile. His jaws are powerful, his teeth are sharp, and he loves to bask in the sun. What is he?
+"</strong></p>
 
                     <input type="text" id="answer" placeholder="Enter your answer...">
                         <button onclick="checkAnswer()">Submit</button>
@@ -47,12 +48,13 @@
 
                         <script>
                             function checkAnswer() {
-      const correctAnswer = "ответ";
+      const correctAnswer = "Crocodile";
                             const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
                             const resultDiv = document.getElementById("result");
 
                             if (userAnswer === correctAnswer) {
-                                resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>Follow the path to the old oak tree.</strong>`;
+                                resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>The next QR code is in the office where a device can produce a physical replica of any object.
+  [E]</strong>`;
                             resultDiv.classList.remove("hidden");
       } else {
                                 resultDiv.innerHTML = `Wrong answer. Try again.`;
