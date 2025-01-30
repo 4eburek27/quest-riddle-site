@@ -49,19 +49,19 @@
   <div id="result" class="hidden"></div>
 
   <script>
-    function checkAnswer() {
-      const correctAnswer = "Hammer";
-      const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-      const resultDiv = document.getElementById("result");
+   function checkAnswer() {
+  const correctAnswer = "hammer"; // правильный ответ в нижнем регистре
+  const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+  const resultDiv = document.getElementById("result");
 
-      if (userAnswer === correctAnswer) {
-        resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>-behind the rocket    [P]</strong>`;
-        resultDiv.classList.remove("hidden");
-      } else {
-        resultDiv.innerHTML = `Wrong answer. Try again.`;
-        resultDiv.classList.remove("hidden");
-      }
-    }
+  if (userAnswer === correctAnswer) {
+    resultDiv.innerHTML = `Верно! Вот ваша подсказка для следующего этапа: <br><strong>-за ракетой [P]</strong>`;
+    resultDiv.classList.remove("hidden");
+  } else {
+    resultDiv.innerHTML = `Неправильно. Попробуйте еще раз.`;
+    resultDiv.classList.remove("hidden");
+  }
+}
   </script>
 </body>
 </html>
