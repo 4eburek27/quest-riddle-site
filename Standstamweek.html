@@ -47,20 +47,21 @@
                         <div id="result" class="hidden"></div>
 
                         <script>
-                            function checkAnswer() {
-      const correctAnswer = "Crocodile";
-                            const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-                            const resultDiv = document.getElementById("result");
+                           function checkAnswer() {
+  const correctAnswer = "crocodile"; // правильный ответ в нижнем регистре
+  const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+  const resultDiv = document.getElementById("result");
 
-                            if (userAnswer === correctAnswer) {
-                                resultDiv.innerHTML = `Correct! Here's your hint for the next stage: <br><strong>The next QR code is in the office where a device can produce a physical replica of any object.
-  [E]</strong>`;
-                            resultDiv.classList.remove("hidden");
-      } else {
-                                resultDiv.innerHTML = `Wrong answer. Try again.`;
-                            resultDiv.classList.remove("hidden");
-      }
-    }
+  if (userAnswer === correctAnswer) {
+    resultDiv.innerHTML = `Верно! Вот ваша подсказка для следующего этапа: <br><strong>The next QR code is in the office where a device can produce a physical replica of any object.
+ [P]</strong>`;
+    resultDiv.classList.remove("hidden");
+  } else {
+    resultDiv.innerHTML = `Неправильно. Попробуйте еще раз.`;
+    resultDiv.classList.remove("hidden");
+  }
+}
+
                         </script>
                 </body>
             </html>
